@@ -8,6 +8,13 @@ import java.util.List;
 
 import org.junit.*;
 
+public class StartsWithCapital implements StringChecker {
+  public boolean checkString(String s) {
+    if (s.length() > 0) return Character.isUpperCase(s.charAt(0));
+    return false;
+  }
+}
+
 public class TestListExamples {
   // Write your grading tests here!
   @Test
