@@ -25,7 +25,7 @@ cp -r lib student-submission/
 
 cd student-submission/
 
-javac ListExamples.java
+javac ListExamples.java > output.txt 2> error.txt
 if [[ $? != 0 ]]
 then
 	echo "ListExamples.java did not compile. 0 points."
@@ -33,4 +33,4 @@ then
 fi
 
 javac -cp $CPATH *.java
-java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > output.txt
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > output.txt 2> error.txt
